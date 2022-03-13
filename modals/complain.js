@@ -21,4 +21,4 @@ const complainSchema = new mongoose.Schema({
     }
 });
 
-mongoose.model('complain', complainSchema);
+module.exports = mongoose.model('complain', complainSchema);

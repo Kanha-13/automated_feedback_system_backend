@@ -25,12 +25,8 @@ const userSchema = new mongoose.Schema({
         state: {
             type: String,
             required: true
-        },
-        country: {
-            type: String,
-            required: true
-        },
+        }
     }
 });
 
-mongoose.model('user', userSchema);
+module.exports = mongoose.model('user', userSchema);
