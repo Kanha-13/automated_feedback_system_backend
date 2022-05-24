@@ -33,4 +33,4 @@ const complainSchema = new mongoose.Schema({
     }
 });
 
-mongoose.model('electricOffice', complainSchema);
+module.exports = mongoose.model('electricOffice', complainSchema);

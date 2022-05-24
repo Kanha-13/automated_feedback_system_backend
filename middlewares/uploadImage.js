@@ -12,7 +12,7 @@ const drive = google.drive({
     version: 'v3',
     auth: oauth2client
 })
-const filepath = path.join(__dirname, 'testImage.jpg')
+// const filepath = path.join(__dirname, 'testImage.jpg')
 function bufferToStream(buffer) { //SPENT MORE THAN 10 HOURS TO FIND THIS SOLUTION
     var stream = new Readable();
     stream.push(buffer);
@@ -36,7 +36,7 @@ module.exports = {
             })
             return res.data
         } catch (error) {
-            console.log(error.message)
+            console.log(error.message, "this is error====> in upload")
         }
 
     },

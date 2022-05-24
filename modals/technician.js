@@ -13,13 +13,14 @@ const technicianSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    id: {
+    employeeId: {
         type: String,
         required: true
     },
-    electricOfficeId: {
-        type: mongoose.Schema.ObjectId,
-    },
+    // electricOfficeId: {
+    //     type: mongoose.Schema.ObjectId,
+    //     ref: 'electricOffices'
+    // },
     address: {
         locality: {
             type: String,
@@ -32,12 +33,12 @@ const technicianSchema = new mongoose.Schema({
         state: {
             type: String,
             required: true
-        },
-        country: {
-            type: String,
-            required: true
-        },
+        }
+    },
+    fireBaseId: {
+        type: String,
+        required: true
     }
 });
 
-mongoose.model('technician', technicianSchema);
+module.exports = mongoose.model('technician', technicianSchema);

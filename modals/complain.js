@@ -3,19 +3,31 @@ const mongoose = require('mongoose');
 const complainSchema = new mongoose.Schema({
     applicantId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'user',
+        ref: 'users',
+        required: true
+    },
+    problemTitle: {
+        type: String,
+        required: true
+    },
+    problemDesc: {
+        type: String,
         required: true
     },
     assignedTo: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'technician',
+        ref: 'technicians',
         // required: true
     },
     defectiveLightUrl: {
         type: String,
         required: true
     },
-    location: {
+    location: { // this contains coordinates
+        type: Object,
+        // required: true
+    },
+    address: {// this contains address as string
         type: Object,
         required: true
     }

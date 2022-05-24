@@ -1,3 +1,4 @@
 const complain = require('./complain')
 const user = require('./user')
-module.exports = [complain, user]
+const technician = require('./technician')
+module.exports = [complain, user, technician]
